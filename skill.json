@@ -1,0 +1,42 @@
+{
+  "name": "genpark-bidirectional-human-agent-state-sync-coordinator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Bidirectional human-in-the-loop and agent shared workspace state synchronization and optimistic lock coordinator.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "multi-agent-swarms",
+  "tags": [
+    "coagents",
+    "copilotkit",
+    "state-sync",
+    "human-agent-collab",
+    "shared-state"
+  ],
+  "inputs": {
+    "session_id": {
+      "type": "string"
+    },
+    "human_delta_mutations": {
+      "type": "array"
+    },
+    "agent_delta_mutations": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "sync_event_id": {
+      "type": "string"
+    },
+    "conflict_detected": {
+      "type": "boolean"
+    },
+    "merged_workspace_version": {
+      "type": "integer"
+    },
+    "state_sync_telemetry_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
